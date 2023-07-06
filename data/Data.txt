@@ -1,0 +1,105 @@
+Find the roots of the equation x^2 - 5x + 6 = 0.
+====
+Solve the equation 2x - 3 = 7.
+====
+Find the value of x in the equation sin(x) = 0.5.
+====
+Find the solution of the equation 3x + 4 = 19.
+====
+Solve the equation 5x - 4 = 3x + 8.
+====
+Find the roots of the equation x^2 - 7x + 10 = 0.
+====
+Solve the equation 4x + 5 = 2x + 15.
+====
+Find the value of x in the equation cos(x) = 0.866.
+====
+Find the roots of the equation x^2 - 9x + 20 = 0.
+====
+Solve the equation 6x - 4 = 2x + 12.
+====
+Find the value of x in the equation tan(x) = 1.
+====
+Find the roots of the equation x^2 - 11x + 30 = 0.
+====
+Solve the equation 7x - 5 = 3x + 15.
+====
+Find the value of x in the equation sin(x) = 0.707.
+====
+Find the roots of the equation x^2 - 13x + 42 = 0.
+====
+Solve the equation 8x - 6 = 4x + 18.
+====
+Find the value of x in the equation cos(x) = 0.5.
+====
+Find the roots of the equation x^2 - 15x + 56 = 0.
+====
+Solve the equation 9x - 7 = 5x + 21.
+====
+Find the value of x in the equation tan(x) = 0.577.
+====
+Find the roots of the equation x^2 - 17x + 72 = 0.
+====
+Solve the equation 10x - 8 = 6x + 24.
+====
+Find the value of x in the equation sin(x) = 0.866.
+====
+Find the roots of the equation x^2 - 19x + 90 = 0.
+====
+Solve the equation 11x - 9 = 7x + 27.
+====
+Find the value of x in the equation cos(x) = 0.707.
+====
+Find the roots of the equation x^2 - 21x + 110 = 0.
+====
+Solve the equation 12x - 10 = 8x + 30.
+====
+Find the value of x in the equation tan(x) = 1.732.
+====
+Find the roots of the equation x^2 - 23x + 132 = 0.
+====
+Solve the equation 13x - 11 = 9x + 33.
+====
+Find the value of x in the equation sin(x) = 1.
+====
+Find the roots of the equation x^2 - 25x + 156 = 0.
+====
+Solve the equation 14x - 12 = 10x + 36.
+====
+Find the value of x in the equation cos(x) = 0.866.
+====
+Find the roots of the equation x^2 - 27x + 182 = 0.
+====
+Solve the equation 15x - 13 = 11x + 39.
+====
+Find the value of x in the equation tan(x) = 0.577.
+====
+The father's age is 3 times the son's. If the son’s age is 10, how old is the father?
+====
+If the height of a tower is 100m. What is the distance from the point on the ground to the top of the tower if the angle of elevation is 30 degrees?
+====
+A train travels 90 km in 1 hour. How much will it travel in 5 hours?
+====
+A man can complete a journey in 10 hours. If he travels 7 hours less than the time he usually takes, how long is his journey?
+====
+The height of a balloon above the ground directly is 60m. The angle of elevation of the balloon from a point 100m away from the observation point is 60 degrees. What is the height of the balloon from the ground?
+====
+The sum of the ages of a mother and her son is 50 years. 5 years ago, the mother's age was four times the age of the son. What are their present ages?
+====
+A man is 4 times as old as his son. In 5 years, he will be three times as old as his son. How old are they now?
+====
+The height of a tower is 200m. How far is the point from the base of the tower if the angle of depression from the top of the tower to the point is 45 degrees?
+====
+An object is dropped from a height of 100m. How long will it take to reach the ground? (Use the equation of motion h = 1/2gt^2, where g = 9.8m/s^2)
+====
+The length of a rectangle is twice the breadth. If the perimeter of the rectangle is 180cm, what are the length and breadth of the rectangle?
+====
+A man travels from A to B at a speed of 40 km/hr and returns from B to A at a speed of 60 km/hr. What is the average speed of the man?
+====
+The height of a tree is 100m. The angle of elevation from a point P to the top of the tree is 30 degrees. How far is point P from the base of the tree?
+====
+A man's speed is 10km/hr more than a boy's speed. If the man walks 60 km in the same time the boy walks 40 km, what is the speed of each?
+====
+A man is three times as old as his son was two years ago. If the sum of their ages is 58, find their ages.
+====
+Sachin scored twice as many runs in the second match as he scored in his first match. He scored a total of 270 runs in both matches. How many runs did he score in each match?
