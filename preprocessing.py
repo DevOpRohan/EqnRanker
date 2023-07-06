@@ -3,7 +3,8 @@ import re
 from openAiApi import OpenAIAPI
 from utils import remove_false_and_none_lines
 from prompts import extract_equation_sys_prompt, extract_equation_prompt, extract_equation_features_sys_prompt, \
-    extract_equation_features_prompt, extract_concepts_sys_prompt, extract_concepts_prompt
+    extract_equation_features_prompt, extract_concepts_sys_prompt, extract_concepts_prompt, \
+    extract_equation_type_sys_prompt, extract_equation_type_init_prompt
 
 
 class ContentPreprocessor:
@@ -58,6 +59,26 @@ class ContentPreprocessor:
         features = completion.choices[0].message["content"]
         return features
 
+    async def extract_equation_type(self, content):
+        messages = [
+            {
+                "role": "system",
+                "content": extract_equation_type_sys_prompt,
+            },
+            {
+                "role": "user",
+                "content": extract_equation_type_init_prompt.format(problem=content)
+            }
+        ]
+        completion = await self.llm.chat_completion(
+            model="gpt-4",
+            messages=messages,
+            temperature=0.7,
+            max_tokens=512,
+        )
+
+        equation_type = completion.choices[0].message["content"]
+        return equation_type
     async def extract_concepts(self, content):
         messages = [
             {
@@ -95,6 +116,7 @@ class ContentPreprocessor:
 
         # if equation isn't None
         if equation is not None:
+            """
             processed_content += "\n\n====\nEquation Features:\n"
             # Extract the features of the equations
             features = await self.extract_equation_features(equation)
@@ -104,10 +126,53 @@ class ContentPreprocessor:
 
             # Add the features to the content
             processed_content += features
+            """
+            # Add the type of the equation
+            processed_content += "\n\n====\nEquation Type:\n"
+            equation_type = await self.extract_equation_type(equation)
+            processed_content += equation_type
 
         # add the content to the processed content
         processed_content += "\n\n====\nExample:\n"
         processed_content += content
+        return processed_content
+
+    async def preprocessQuery(self, query):
+        # Extract the concepts
+        concepts = await self.extract_concepts(query)
+        # Extract the equations
+        equation = await self.extract_equation(query)
+
+        processed_content = ""
+
+        # if concepts isn't None
+        if concepts:
+            processed_content += "Concepts:\n"
+            # Add the concepts to the content
+            processed_content += concepts
+
+        # if equation isn't None
+        if equation is not None:
+            #Rather then feature extraction, Type extraction is more intuitive and token optimized approach in case of semantic search.
+            #Feature extraction will be fine in case of normal search instead of semantic search.
+            """
+            processed_content += "\n\n====\nEquation Features:\n"
+            # Extract the features of the equations
+            features = await self.extract_equation_features(equation)
+
+            # Experimental: Remove the attributes having false or None values
+            features = remove_false_and_none_lines(features)
+
+            # Add the features to the content
+            processed_content += features
+            """
+            # Add the type of the equation
+            processed_content += "\n\n====\nEquation Type:\n"
+            equation_type = await self.extract_equation_type(equation)
+            processed_content += equation_type
+        # add the content to the processed content
+        processed_content += "\n\n====\nExample:\n"
+        processed_content += query
         return processed_content
 
     async def _preprocess_contents(self, contents):

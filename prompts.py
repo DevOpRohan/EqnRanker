@@ -49,6 +49,19 @@ Equation:
 Features in Json:
 """
 
+extract_equation_type_sys_prompt = """
+You are an AI math tutor.
+Retrieve type of given polynomial or equations
+e.g. Solve 2x^2 + 3sin(x) = 10
+Type:
+ax^2 + bsin(x) = c
+a, b, c is integer
+"""
+extract_equation_type_init_prompt = """
+{problem}
+Type:
+"""
+
 ### Concept Extractor ###
 extract_concepts_sys_prompt = """
 You are a math teacher.
@@ -63,6 +76,7 @@ Context:
 ```
 Concept Involved:
 """
+
 extract_concepts_prompt = PromptTemplate(
     input_variables=["problem"],
     template=extract_concepts_init_prompt
@@ -76,4 +90,9 @@ extract_equation_prompt = PromptTemplate(
 extract_equation_features_prompt = PromptTemplate(
     input_variables=["problem"],
     template=extract_equation_features_init_prompt
+)
+
+extract_equation_type_prompt = PromptTemplate(
+    input_variables=["problem"],
+    template=extract_equation_type_init_prompt
 )
